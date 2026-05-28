@@ -1,4 +1,4 @@
-import { Button, Image, StyleSheet, View } from "react-native";
+import { Image, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 
 const landingpage = () => {
   return (
@@ -22,9 +22,14 @@ const landingpage = () => {
         />
       </View>
 
-      <View style={styles.button}>
-        <Button title="Press me" color="black" />
-      </View>
+      <TouchableOpacity style={styles.button}>
+        <Text>Text</Text>
+
+        <Image
+          source={require("../assets/images/transparentG.png")}
+          style={styles.gLogo}
+        />
+      </TouchableOpacity>
     </View>
   );
 };
@@ -64,8 +69,18 @@ const styles = StyleSheet.create({
   },
 
   button: {
+    flexDirection: "row",
     alignSelf: "center",
-    marginTop: 7,
-    width: "20%",
+    marginTop: 2,
+    width: 300,
+    height: 40,
+    backgroundColor: "#727272",
+    borderRadius: 30,
+    alignItems: "center",
+  },
+
+  gLogo: {
+    width: 20,
+    height: 20,
   },
 });
