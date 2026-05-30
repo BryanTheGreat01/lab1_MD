@@ -15,6 +15,7 @@ const landingpage = () => {
         />
       </View>
 
+      {/*google logo*/}
       <View style={styles.logo}>
         <Image
           source={require("../assets/images/transparentLogo.png")}
@@ -22,6 +23,7 @@ const landingpage = () => {
         />
       </View>
 
+      {/*search bar*/}
       <View style={styles.ui}>
         <TouchableOpacity style={styles.button}>
           <View style={styles.leftGroup}>
@@ -48,6 +50,7 @@ const landingpage = () => {
           </View>
         </TouchableOpacity>
 
+        {/*different modes*/}
         <View style={styles.mode}>
           <TouchableOpacity style={styles.aiButton}>
             <Image
@@ -64,9 +67,42 @@ const landingpage = () => {
               style={styles.clogo}
             />
 
-            <View></View>
             <Text style={styles.text}>Incognito</Text>
           </TouchableOpacity>
+        </View>
+
+        {/*apps*/}
+
+        <View style={styles.apps}>
+          <View style={styles.appContainer}>
+            <TouchableOpacity>
+              <Image
+                source={require("../assets/images/facebook.png")}
+                style={styles.clogo}
+              />
+            </TouchableOpacity>
+            <Text style={styles.apptext}> Facebook</Text>
+          </View>
+
+          <View style={styles.appContainer}>
+            <TouchableOpacity>
+              <Image
+                source={require("../assets/images/youtube.png")}
+                style={styles.clogo}
+              />
+            </TouchableOpacity>
+            <Text style={styles.apptext}> Youtube</Text>
+          </View>
+
+          <View style={styles.appContainer}>
+            <TouchableOpacity>
+              <Image
+                source={require("../assets/images/Wikipedia.png")}
+                style={styles.clogo}
+              />
+            </TouchableOpacity>
+            <Text style={styles.apptext}> Wikipedia</Text>
+          </View>
         </View>
       </View>
     </View>
@@ -157,7 +193,7 @@ const styles = StyleSheet.create({
 
   clogo: {
     width: 25,
-    height: 20,
+    height: 25,
     resizeMode: "contain",
     paddingRight: 10,
     paddingLeft: 30,
@@ -190,5 +226,32 @@ const styles = StyleSheet.create({
     width: 200,
     height: 40,
     padding: 5,
+  },
+
+  apps: {
+    alignItems: "center",
+    flexDirection: "row",
+    margin: 10,
+    width: 400,
+    height: 100,
+    padding: 30,
+    paddingBottom: 60,
+    backgroundColor: "#727272",
+    justifyContent: "space-between",
+    borderRadius: 20,
+  },
+
+  appContainer: {
+    paddingTop: 15,
+    backgroundColor: "#a8a2a2",
+    width: 50,
+    height: 50,
+    borderRadius: 100,
+    alignItems: "center",
+  },
+
+  apptext: {
+    paddingBottom: 25,
+    color: "#fff",
   },
 });
