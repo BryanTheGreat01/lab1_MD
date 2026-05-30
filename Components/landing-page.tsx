@@ -63,6 +63,8 @@ const landingpage = () => {
               source={require("../assets/images/Incognito.png")}
               style={styles.clogo}
             />
+
+            <View></View>
             <Text style={styles.text}>Incognito</Text>
           </TouchableOpacity>
         </View>
